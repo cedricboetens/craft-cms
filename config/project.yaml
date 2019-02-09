@@ -1,4 +1,4 @@
-dateModified: 1549710502
+dateModified: 1549717688
 email:
   fromEmail: cedric@exsited.be
   fromName: 'craftcms - test'
@@ -6,6 +6,8 @@ email:
 fieldGroups:
   2ba98ef9-af27-49eb-9d73-e213d14dc87a:
     name: Blog
+  818ab756-43bd-420f-8eac-954c667323b7:
+    name: Services
   8c5f52cb-dd71-4fb9-a674-edf9adfaa1a2:
     name: Common
   c0f889c7-f662-4cfd-8078-af116d1a88fb:
