@@ -1,0 +1,74 @@
+dateModified: 1549707517
+email:
+  fromEmail: cedric@exsited.be
+  fromName: 'craftcms - test'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  8c5f52cb-dd71-4fb9-a674-edf9adfaa1a2:
+    name: Common
+sections:
+  464a1e89-e707-43e2-8d62-49e9955d8cb3:
+    enableVersioning: true
+    entryTypes:
+      d0635026-2722-40f5-84c7-26fca0b0bcb3:
+        handle: blog
+        hasTitleField: true
+        name: Blog
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Titel
+    handle: blog
+    name: Blog
+    propagateEntries: true
+    siteSettings:
+      9a1033f8-6aad-43e8-bbce-8480420aac12:
+        enabledByDefault: true
+        hasUrls: true
+        template: blog/_entry
+        uriFormat: '{slug}'
+    type: channel
+  65ad4eb6-0615-4759-9700-7dd44565c3d8:
+    enableVersioning: true
+    entryTypes:
+      d20db1fd-203d-46bc-8c36-e1971611d4bb:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagateEntries: true
+    siteSettings:
+      9a1033f8-6aad-43e8-bbce-8480420aac12:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: /
+    type: single
+siteGroups:
+  ef97d8c9-a4b6-4d5e-8f0f-5b5d4b24477e:
+    name: 'craftcms - test'
+sites:
+  9a1033f8-6aad-43e8-bbce-8480420aac12:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: nl-BE
+    name: 'craftcms - test'
+    primary: true
+    siteGroup: ef97d8c9-a4b6-4d5e-8f0f-5b5d4b24477e
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'craftcms - test'
+  schemaVersion: 3.1.23
+  timeZone: Europe/Brussels
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
