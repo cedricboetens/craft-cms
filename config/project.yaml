@@ -1,21 +1,89 @@
-dateModified: 1549707517
+dateModified: 1549710502
 email:
   fromEmail: cedric@exsited.be
   fromName: 'craftcms - test'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  2ba98ef9-af27-49eb-9d73-e213d14dc87a:
+    name: Blog
   8c5f52cb-dd71-4fb9-a674-edf9adfaa1a2:
     name: Common
+  c0f889c7-f662-4cfd-8078-af116d1a88fb:
+    name: Pages
+fields:
+  c5d1b02a-784d-4f88-a7aa-a90a54a152ff:
+    contentColumnType: text
+    fieldGroup: c0f889c7-f662-4cfd-8078-af116d1a88fb
+    handle: pageCopy
+    instructions: ''
+    name: 'Page Copy'
+    searchable: true
+    settings:
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  d367c46c-9db1-4826-98b6-b420cfc22b84:
+    contentColumnType: text
+    fieldGroup: 2ba98ef9-af27-49eb-9d73-e213d14dc87a
+    handle: blogIntroduction
+    instructions: 'Short, one-line about the blog entry.'
+    name: 'Blog Introduction'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Blog introduction here'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e402c6f6-3133-4964-bce9-7ca0e1eebc65:
+    contentColumnType: text
+    fieldGroup: 2ba98ef9-af27-49eb-9d73-e213d14dc87a
+    handle: blogBody
+    instructions: ''
+    name: 'Blog Body'
+    searchable: true
+    settings:
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   464a1e89-e707-43e2-8d62-49e9955d8cb3:
     enableVersioning: true
     entryTypes:
       d0635026-2722-40f5-84c7-26fca0b0bcb3:
+        fieldLayouts:
+          4f9e320a-3c42-4508-96dc-ea6c04bf067c:
+            tabs:
+              -
+                fields:
+                  d367c46c-9db1-4826-98b6-b420cfc22b84:
+                    required: false
+                    sortOrder: 1
+                  e402c6f6-3133-4964-bce9-7ca0e1eebc65:
+                    required: false
+                    sortOrder: 2
+                name: Blog
+                sortOrder: 1
         handle: blog
         hasTitleField: true
         name: Blog
         sortOrder: 1
-        titleFormat: null
+        titleFormat: ''
         titleLabel: Titel
     handle: blog
     name: Blog
@@ -47,6 +115,39 @@ sections:
         template: index
         uriFormat: /
     type: single
+  6bef20bf-172e-4e43-8c16-8f652df82840:
+    enableVersioning: true
+    entryTypes:
+      8e8b3cf7-0664-4d57-84e5-54558b4169ef:
+        fieldLayouts:
+          0c6ef91c-2d1c-49b5-862c-4cae18694494:
+            tabs:
+              -
+                fields:
+                  c5d1b02a-784d-4f88-a7aa-a90a54a152ff:
+                    required: false
+                    sortOrder: 1
+                name: Pages
+                sortOrder: 1
+        handle: pages
+        hasTitleField: true
+        name: Pages
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Page Title'
+    handle: pages
+    name: Pages
+    propagateEntries: true
+    siteSettings:
+      9a1033f8-6aad-43e8-bbce-8480420aac12:
+        enabledByDefault: true
+        hasUrls: true
+        template: pages/_entry
+        uriFormat: '{slug}'
+    structure:
+      maxLevels: ''
+      uid: 87bb7cee-9ee8-4e46-ac8f-2f4738d8be7b
+    type: structure
 siteGroups:
   ef97d8c9-a4b6-4d5e-8f0f-5b5d4b24477e:
     name: 'craftcms - test'
