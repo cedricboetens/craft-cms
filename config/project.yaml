@@ -1,4 +1,16 @@
-dateModified: 1549717688
+categoryGroups:
+  4b2eb4ad-c35f-4c4a-a4c8-5c6bcb7549ce:
+    handle: blog
+    name: Blog
+    siteSettings:
+      9a1033f8-6aad-43e8-bbce-8480420aac12:
+        hasUrls: true
+        template: blog/_category
+        uriFormat: 'categories/{slug}'
+    structure:
+      maxLevels: null
+      uid: f630354b-cb31-4f0c-814d-15c1deeda5a4
+dateModified: 1549731640
 email:
   fromEmail: cedric@exsited.be
   fromName: 'craftcms - test'
@@ -12,7 +24,79 @@ fieldGroups:
     name: Common
   c0f889c7-f662-4cfd-8078-af116d1a88fb:
     name: Pages
+  c3762fde-3836-4921-b09f-344839863d5c:
+    name: Globals
 fields:
+  1bf67004-e034-4a8d-865a-8db6b0f7d7b9:
+    contentColumnType: string
+    fieldGroup: 2ba98ef9-af27-49eb-9d73-e213d14dc87a
+    handle: category
+    instructions: ''
+    name: Category
+    searchable: true
+    settings:
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'group:4b2eb4ad-c35f-4c4a-a4c8-5c6bcb7549ce'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  38b2acfc-fcce-4573-b40b-7f2945287323:
+    contentColumnType: text
+    fieldGroup: c3762fde-3836-4921-b09f-344839863d5c
+    handle: companyAddress
+    instructions: ''
+    name: 'Company address'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  786c2866-1470-453d-a617-8d05558953f2:
+    contentColumnType: text
+    fieldGroup: c3762fde-3836-4921-b09f-344839863d5c
+    handle: companyEmail
+    instructions: ''
+    name: 'Company email'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9b15d168-c2fe-47b3-8d82-47633aed9861:
+    contentColumnType: text
+    fieldGroup: c3762fde-3836-4921-b09f-344839863d5c
+    handle: companyName
+    instructions: ''
+    name: 'Company name'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   c5d1b02a-784d-4f88-a7aa-a90a54a152ff:
     contentColumnType: text
     fieldGroup: c0f889c7-f662-4cfd-8078-af116d1a88fb
@@ -58,6 +142,26 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field
+globalSets:
+  3ac5aebd-57d2-4f83-9bab-392482132cc4:
+    fieldLayouts:
+      20063539-7607-4c05-a9d7-7975c71e4eec:
+        tabs:
+          -
+            fields:
+              38b2acfc-fcce-4573-b40b-7f2945287323:
+                required: false
+                sortOrder: 3
+              786c2866-1470-453d-a617-8d05558953f2:
+                required: false
+                sortOrder: 2
+              9b15d168-c2fe-47b3-8d82-47633aed9861:
+                required: false
+                sortOrder: 1
+            name: Globals
+            sortOrder: 1
+    handle: globals
+    name: Globals
 plugins:
   ckeditor:
     edition: standard
@@ -73,6 +177,9 @@ sections:
             tabs:
               -
                 fields:
+                  1bf67004-e034-4a8d-865a-8db6b0f7d7b9:
+                    required: false
+                    sortOrder: 3
                   d367c46c-9db1-4826-98b6-b420cfc22b84:
                     required: false
                     sortOrder: 1
@@ -145,7 +252,7 @@ sections:
         enabledByDefault: true
         hasUrls: true
         template: pages/_entry
-        uriFormat: '{slug}'
+        uriFormat: '{parent.uri}/{slug}'
     structure:
       maxLevels: ''
       uid: 87bb7cee-9ee8-4e46-ac8f-2f4738d8be7b

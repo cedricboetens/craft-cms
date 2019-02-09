@@ -1,3 +1,4 @@
+<!-- COMBAK -->
 {% extends '_layout.twig' %}
 {% block main %}
 
@@ -33,11 +34,7 @@
         </a>
         <p class="post-meta">Posted by
           <a href="#">{{entry.author}}</a>
-          on {{ entry.postDate | datetime('short') }} in {% for category in entry.category.all() %}
-            <a href="{{ category.url }}">
-            {{ category.title }}
-            </a>
-          {% endfor %}</p>
+          on {{ entry.postDate | datetime('short') }}</p>
       </div>
       <hr>
       {% endfor %}
@@ -49,4 +46,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}
